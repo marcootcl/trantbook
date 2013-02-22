@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 
   validates :last_name, presence: true
   
-  validates :profile_name, presence: true
+  validates :profile_name, presence: true,
+                          uniqueness: true
   
   # attr_accessible :title, :body
 
